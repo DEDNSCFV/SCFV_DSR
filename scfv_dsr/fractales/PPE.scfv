@@ -1,0 +1,18 @@
+FRACTAL PPE DOMINIO CONTABLE:
+    REGLA ACTIVACION_PYMES:
+        SI marco == "NIIF_PYMES" Y adquisicion_ppe
+        ENTONCES
+            GENERAR CONSECUENCIA(fuente="Pymes_S17.9", categoria="ppe", operacion="suma_montos", movimiento="AUMENTA")
+            GENERAR CONSECUENCIA(fuente="Pymes_S17.9", cuenta="210101", operacion="suma_montos", movimiento="AUMENTA")
+
+    REGLA DEPRECIACION_PYMES:
+        SI marco == "NIIF_PYMES" Y activo_es_ppe
+        ENTONCES
+            GENERAR CONSECUENCIA(fuente="Pymes_S17.17", cuenta="610201", operacion="depreciacion_lineal", movimiento="AUMENTA")
+            GENERAR CONSECUENCIA(fuente="Pymes_S17.17", cuenta="150199", operacion="depreciacion_lineal", movimiento="AUMENTA")
+
+    REGLA BAJA_PYMES:
+        SI marco == "NIIF_PYMES" Y baja_ppe
+        ENTONCES
+            GENERAR CONSECUENCIA(fuente="Pymes_S17.27", cuenta="150199", operacion="suma_montos", movimiento="DISMINUYE")
+            GENERAR CONSECUENCIA(fuente="Pymes_S17.27", categoria="ppe", operacion="suma_montos", movimiento="DISMINUYE")

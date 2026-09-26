@@ -1,0 +1,12 @@
+FRACTAL COMBINACIONES DOMINIO CONTABLE:
+    REGLA PLUSVALIA_PYMES:
+        SI marco == "NIIF_PYMES" Y adquisicion_negocio
+        ENTONCES
+            GENERAR CONSECUENCIA(fuente="Pymes_S19.22", categoria="plusvalia", operacion="plusvalia", movimiento="AUMENTA")
+            GENERAR CONSECUENCIA(fuente="Pymes_S19.22", cuenta="210101", operacion="plusvalia", movimiento="AUMENTA")
+
+    REGLA GANANCIA_COMPRA_VENTAJOSA_PYMES:
+        SI marco == "NIIF_PYMES" Y compra_condiciones_ventajosas
+        ENTONCES
+            GENERAR CONSECUENCIA(fuente="Pymes_S19.24", cuenta="110101", operacion="suma_montos", movimiento="AUMENTA")
+            GENERAR CONSECUENCIA(fuente="Pymes_S19.24", categoria="ganancia_compra_ventajosa", operacion="suma_montos", movimiento="AUMENTA")

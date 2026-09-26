@@ -1,0 +1,9 @@
+# FRACTAL VENTAS · DOMINIO CONTABLE
+# Prueba con evento real tipo="venta"
+
+FRACTAL VENTAS DOMINIO CONTABLE:
+    REGLA REGISTRO_VENTA_PYMES:
+        SI marco == "NIIF_PYMES" Y activo_es_venta
+        ENTONCES
+            GENERAR CONSECUENCIA(fuente="Pymes_S23", cuenta="110101", operacion="suma_montos", movimiento="AUMENTA")
+            GENERAR CONSECUENCIA(fuente="Pymes_S23", cuenta="410101", operacion="suma_montos", movimiento="AUMENTA")

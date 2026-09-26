@@ -1,0 +1,226 @@
+{
+  "version": "1.0",
+  "descripcion": "Diccionario de operaciones contables. Traduce el nombre del metodo normativo a la operacion Baldor ejecutable.",
+  "reglas": {
+    "aditivo": "Se anaden operaciones nuevas sin modificar las existentes.",
+    "versionado": "Si una operacion cambia, se crea nueva entrada con sufijo _v2.",
+    "frontera": "Cada operacion cita sus normas de origen.",
+    "primitivas": "Las primitivas matematicas viven en balbor.py. Este diccionario las referencia."
+  },
+  "operaciones": {
+    "menor_costo_vnr": {
+      "descripcion": "Menor entre costo y valor neto realizable",
+      "normas": [
+        "NIC_2",
+        "S13"
+      ],
+      "formula": "min(costo, valor_neto_realizable)",
+      "operacion": "min",
+      "parametros": [
+        "costo",
+        "valor_neto_realizable"
+      ]
+    },
+    "menor_costo_precio_venta": {
+      "descripcion": "Menor entre costo y precio de venta menos costos de terminacion",
+      "normas": [
+        "S13"
+      ],
+      "formula": "min(costo, precio_venta - costos_terminacion_venta)",
+      "operacion": "min_aritmetica",
+      "parametros": [
+        "costo",
+        "precio_venta",
+        "costos_terminacion_venta"
+      ]
+    },
+    "valor_neto_realizable": {
+      "descripcion": "Precio de venta menos costos de realizacion",
+      "normas": [
+        "NIC_2",
+        "S13"
+      ],
+      "formula": "precio_venta - costos_realizacion",
+      "operacion": "resta",
+      "parametros": [
+        "precio_venta",
+        "costos_realizacion"
+      ]
+    },
+    "depreciacion_lineal": {
+      "descripcion": "Depreciacion por linea recta",
+      "normas": [
+        "NIC_16",
+        "S17"
+      ],
+      "formula": "(costo - valor_residual) / vida_util",
+      "operacion": "aritmetica_compuesta",
+      "parametros": [
+        "costo",
+        "valor_residual",
+        "vida_util"
+      ]
+    },
+    "amortizacion_lineal": {
+      "descripcion": "Amortizacion de intangible por linea recta",
+      "normas": [
+        "NIC_38",
+        "S18"
+      ],
+      "formula": "costo / vida_util",
+      "operacion": "division",
+      "parametros": [
+        "costo",
+        "vida_util"
+      ]
+    },
+    "interes_compuesto": {
+      "descripcion": "Capital final a interes compuesto",
+      "normas": [
+        "NIC_23",
+        "NIIF_9"
+      ],
+      "funcion_baldor": "capital_final",
+      "parametros": [
+        "c",
+        "r",
+        "t"
+      ]
+    },
+    "valor_presente": {
+      "descripcion": "Valor presente de un flujo futuro",
+      "normas": [
+        "NIC_36",
+        "NIIF_16",
+        "NIIF_13"
+      ],
+      "funcion_baldor": "capital_inicial",
+      "parametros": [
+        "C",
+        "r",
+        "t"
+      ]
+    },
+    "valor_presente_anualidad": {
+      "descripcion": "Valor presente de una anualidad de n pagos iguales",
+      "normas": [
+        "S20",
+        "NIIF_16"
+      ],
+      "formula": "(pago/r) * (1 - (1+r)^(-n))",
+      "operacion": "aritmetica_compuesta",
+      "parametros": [
+        "pago",
+        "r",
+        "n"
+      ]
+    },
+    "valor_esperado": {
+      "descripcion": "Valor esperado de una provision",
+      "normas": [
+        "NIC_37",
+        "S21"
+      ],
+      "formula": "sum(probabilidad_i * importe_i)",
+      "operacion": "suma_productos",
+      "parametros": [
+        "desglose"
+      ]
+    },
+    "tasa_efectiva": {
+      "descripcion": "Tasa efectiva implicita",
+      "normas": [
+        "NIIF_9"
+      ],
+      "funcion_baldor": "tasa_ic",
+      "parametros": [
+        "C",
+        "c",
+        "t"
+      ]
+    },
+    "reexpresion_inflacion": {
+      "descripcion": "Reexpresion por inflacion",
+      "normas": [
+        "NIC_29",
+        "BA_VEN_NIF_2"
+      ],
+      "formula": "monto_historico * (indice_cierre / indice_origen)",
+      "operacion": "multiplicacion_compuesta",
+      "parametros": [
+        "monto_historico",
+        "indice_cierre",
+        "indice_origen"
+      ]
+    },
+    "conversion_moneda": {
+      "descripcion": "Conversion de moneda extranjera",
+      "normas": [
+        "NIC_21",
+        "S30"
+      ],
+      "formula": "monto_moneda_extranjera * tipo_cambio",
+      "operacion": "multiplicacion",
+      "parametros": [
+        "monto",
+        "tipo_cambio"
+      ]
+    },
+    "suma_montos": {
+      "descripcion": "Suma algebraica de montos",
+      "normas": [
+        "generico"
+      ],
+      "funcion_baldor": "sumar_montos",
+      "parametros": [
+        "montos"
+      ]
+    },
+    "verificar_cuadre": {
+      "descripcion": "Verificacion sum(DEBE) == sum(HABER)",
+      "normas": [
+        "generico"
+      ],
+      "funcion_baldor": "verificar_cuadre",
+      "parametros": [
+        "total_debe",
+        "total_haber"
+      ]
+    },
+    "desglose_iva": {
+      "descripcion": "Desglose base + IVA",
+      "normas": [
+        "LIVA_Art4"
+      ],
+      "funcion_baldor": "calcular_base_e_iva",
+      "parametros": [
+        "monto_con_iva",
+        "tasa"
+      ]
+    },
+    "plusvalia": {
+      "descripcion": "Plusvalía en combinación de negocios",
+      "normas": [
+        "S19"
+      ],
+      "formula": "contraprestacion_transferida - activos_netos_identificables",
+      "operacion": "resta",
+      "parametros": [
+        "contraprestacion_transferida",
+        "activos_netos_identificables"
+      ]
+    },
+    "subvencion_sistematica": {
+      "descripcion": "Reconocimiento sistemático de subvención",
+      "normas": [
+        "S24"
+      ],
+      "formula": "monto_subvencion / periodos",
+      "operacion": "division",
+      "parametros": [
+        "monto_subvencion",
+        "periodos"
+      ]
+    }
+  }
+}

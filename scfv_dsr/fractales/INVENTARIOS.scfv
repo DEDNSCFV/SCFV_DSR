@@ -1,0 +1,15 @@
+# FRACTAL INVENTARIOS · DOMINIO CONTABLE
+# NIIF Pymes · Sección 13
+
+FRACTAL INVENTARIOS DOMINIO CONTABLE:
+    REGLA COMPRA_INVENTARIO_PYMES:
+        SI marco == "NIIF_PYMES" Y activo_es_inventario
+        ENTONCES
+            GENERAR CONSECUENCIA(fuente="Pymes_S13.4", categoria="inventarios", operacion="menor_costo_precio_venta", movimiento="AUMENTA")
+            GENERAR CONSECUENCIA(fuente="Pymes_S13.4", cuenta="210101", operacion="suma_montos", movimiento="AUMENTA")
+
+    REGLA DETERIORO_INVENTARIO_PYMES:
+        SI marco == "NIIF_PYMES" Y deterioro_inventario
+        ENTONCES
+            GENERAR CONSECUENCIA(fuente="Pymes_S13.4", categoria="perdida_deterioro", operacion="valor_neto_realizable", movimiento="AUMENTA")
+            GENERAR CONSECUENCIA(fuente="Pymes_S13.4", categoria="inventarios", operacion="valor_neto_realizable", movimiento="DISMINUYE")

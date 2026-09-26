@@ -1,0 +1,149 @@
+{
+  "version": "1.0",
+  "descripcion": "Catalogo de categorias normativas. Categoria + elemento + normas por marco.",
+  "elementos": {
+    "activo": "Recurso economico presente controlado por la entidad como resultado de sucesos pasados (Marco Conceptual NIIF).",
+    "pasivo": "Obligacion presente de la entidad de transferir un recurso economico como resultado de sucesos pasados (Marco Conceptual NIIF).",
+    "patrimonio": "Participacion residual en los activos de la entidad despues de deducir todos sus pasivos (Marco Conceptual NIIF).",
+    "ingreso": "Incrementos en los activos o disminuciones en los pasivos que dan lugar a aumentos en el patrimonio neto (Marco Conceptual NIIF).",
+    "gasto": "Disminuciones en los activos o incrementos en los pasivos que dan lugar a disminuciones en el patrimonio neto (Marco Conceptual NIIF)."
+  },
+  "categorias": {
+    "efectivo_equivalentes": {
+      "elemento": "activo",
+      "normas": {
+        "NIIF_PYMES": "Seccion 7",
+        "NIIF_Completas": "NIC 7",
+        "VEN-NIF_GE": "NIC 7"
+      }
+    },
+    "inventarios": {
+      "elemento": "activo",
+      "normas": {
+        "NIIF_PYMES": "Seccion 13",
+        "NIIF_Completas": "NIC 2",
+        "VEN-NIF_GE": "NIC 2"
+      }
+    },
+    "cxp_comerciales": {
+      "elemento": "pasivo",
+      "normas": {
+        "NIIF_PYMES": "Seccion 4",
+        "NIIF_Completas": "NIC 1"
+      }
+    },
+    "impuestos_por_pagar": {
+      "elemento": "pasivo",
+      "normas": {
+        "NIIF_PYMES": "Seccion 29",
+        "NIIF_Completas": "NIC 12",
+        "VEN-NIF_GE": "NIC 12 + BA VEN-NIF 11"
+      }
+    },
+    "ingresos_ordinarios": {
+      "elemento": "ingreso",
+      "normas": {
+        "NIIF_PYMES": "Seccion 23",
+        "NIIF_Completas": "NIIF 15",
+        "VEN-NIF_GE": "NIIF 15"
+      }
+    },
+    "costo_ventas": {
+      "elemento": "gasto",
+      "normas": {
+        "NIIF_PYMES": "Seccion 5",
+        "NIIF_Completas": "NIC 1"
+      }
+    },
+    "ppe": {
+      "elemento": "activo",
+      "normas": {
+        "NIIF_PYMES": "Seccion 17"
+      }
+    },
+    "depreciacion_acumulada": {
+      "elemento": "activo",
+      "normas": {
+        "NIIF_PYMES": "Seccion 17"
+      }
+    },
+    "intangibles": {
+      "elemento": "activo",
+      "normas": {
+        "NIIF_PYMES": "Seccion 18"
+      }
+    },
+    "amortizacion_acumulada": {
+      "elemento": "activo",
+      "normas": {
+        "NIIF_PYMES": "Seccion 18"
+      }
+    },
+    "plusvalia": {
+      "elemento": "activo",
+      "normas": {
+        "NIIF_PYMES": "Seccion 19"
+      }
+    },
+    "arrendamiento_activo": {
+      "elemento": "activo",
+      "normas": {
+        "NIIF_PYMES": "Seccion 20"
+      }
+    },
+    "arrendamiento_pasivo": {
+      "elemento": "pasivo",
+      "normas": {
+        "NIIF_PYMES": "Seccion 20"
+      }
+    },
+    "provisiones": {
+      "elemento": "pasivo",
+      "normas": {
+        "NIIF_PYMES": "Seccion 21"
+      }
+    },
+    "subvenciones_diferidas": {
+      "elemento": "pasivo",
+      "normas": {
+        "NIIF_PYMES": "Seccion 24"
+      }
+    },
+    "resultado_reexpresion": {
+      "elemento": "patrimonio",
+      "normas": {
+        "NIIF_PYMES": "Seccion 31"
+      }
+    },
+    "diferencia_cambio": {
+      "elemento": "gasto",
+      "normas": {
+        "NIIF_PYMES": "Seccion 30"
+      }
+    },
+    "ingreso_por_subvencion": {
+      "elemento": "ingreso",
+      "normas": {
+        "NIIF_PYMES": "Seccion 24"
+      }
+    },
+    "ganancia_compra_ventajosa": {
+      "elemento": "ingreso",
+      "normas": {
+        "NIIF_PYMES": "Seccion 19"
+      }
+    },
+    "gasto_financiero": {
+      "elemento": "gasto",
+      "normas": {
+        "NIIF_PYMES": "Seccion 25"
+      }
+    },
+    "perdida_deterioro": {
+      "elemento": "gasto",
+      "normas": {
+        "NIIF_PYMES": "Seccion 27"
+      }
+    }
+  }
+}

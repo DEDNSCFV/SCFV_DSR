@@ -1,0 +1,12 @@
+FRACTAL PROVISIONES DOMINIO CONTABLE:
+    REGLA PROVISION_PYMES:
+        SI marco == "NIIF_PYMES" Y obligacion_presente Y probable_salida
+        ENTONCES
+            GENERAR CONSECUENCIA(fuente="Pymes_S21.10", cuenta="610203", operacion="valor_esperado", movimiento="AUMENTA")
+            GENERAR CONSECUENCIA(fuente="Pymes_S21.10", cuenta="220101", operacion="valor_esperado", movimiento="AUMENTA")
+
+    REGLA USO_PROVISION_PYMES:
+        SI marco == "NIIF_PYMES" Y uso_provision
+        ENTONCES
+            GENERAR CONSECUENCIA(fuente="Pymes_S21.15", cuenta="220101", operacion="suma_montos", movimiento="DISMINUYE")
+            GENERAR CONSECUENCIA(fuente="Pymes_S21.15", cuenta="110101", operacion="suma_montos", movimiento="DISMINUYE")

@@ -1,0 +1,12 @@
+FRACTAL ARRENDAMIENTOS DOMINIO CONTABLE:
+    REGLA RECONOCIMIENTO_PYMES:
+        SI marco == "NIIF_PYMES" Y arrendamiento_financiero
+        ENTONCES
+            GENERAR CONSECUENCIA(fuente="Pymes_S20.9", cuenta="180101", operacion="valor_presente_anualidad", movimiento="AUMENTA")
+            GENERAR CONSECUENCIA(fuente="Pymes_S20.9", cuenta="210301", operacion="valor_presente_anualidad", movimiento="AUMENTA")
+
+    REGLA PAGO_CUOTA_PYMES:
+        SI marco == "NIIF_PYMES" Y pago_cuota_arrendamiento
+        ENTONCES
+            GENERAR CONSECUENCIA(fuente="Pymes_S20.11", cuenta="210301", operacion="suma_montos", movimiento="DISMINUYE")
+            GENERAR CONSECUENCIA(fuente="Pymes_S20.11", cuenta="110101", operacion="suma_montos", movimiento="DISMINUYE")

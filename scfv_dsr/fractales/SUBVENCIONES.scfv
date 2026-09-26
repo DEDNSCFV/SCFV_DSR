@@ -1,0 +1,12 @@
+FRACTAL SUBVENCIONES DOMINIO CONTABLE:
+    REGLA RECEPCION_PYMES:
+        SI marco == "NIIF_PYMES" Y subvencion_recibida
+        ENTONCES
+            GENERAR CONSECUENCIA(fuente="Pymes_S24.4", cuenta="110101", operacion="suma_montos", movimiento="AUMENTA")
+            GENERAR CONSECUENCIA(fuente="Pymes_S24.4", cuenta="310101", operacion="suma_montos", movimiento="AUMENTA")
+
+    REGLA DEVENGAMIENTO_PYMES:
+        SI marco == "NIIF_PYMES" Y subvencion_periodo
+        ENTONCES
+            GENERAR CONSECUENCIA(fuente="Pymes_S24.5", cuenta="310101", operacion="subvencion_sistematica", movimiento="DISMINUYE")
+            GENERAR CONSECUENCIA(fuente="Pymes_S24.5", cuenta="510201", operacion="subvencion_sistematica", movimiento="AUMENTA")

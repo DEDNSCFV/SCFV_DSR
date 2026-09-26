@@ -1,0 +1,12 @@
+FRACTAL MONEDA DOMINIO CONTABLE:
+    REGLA TRANSACCION_PYMES:
+        SI marco == "NIIF_PYMES" Y transaccion_moneda_extranjera
+        ENTONCES
+            GENERAR CONSECUENCIA(fuente="Pymes_S30.9", categoria="inventarios", operacion="conversion_moneda", movimiento="AUMENTA")
+            GENERAR CONSECUENCIA(fuente="Pymes_S30.9", cuenta="210101", operacion="conversion_moneda", movimiento="AUMENTA")
+
+    REGLA DIFERENCIA_CAMBIO_PYMES:
+        SI marco == "NIIF_PYMES" Y partida_monetaria_revaluada
+        ENTONCES
+            GENERAR CONSECUENCIA(fuente="Pymes_S30.13", categoria="inventarios", operacion="conversion_moneda", movimiento="DISMINUYE")
+            GENERAR CONSECUENCIA(fuente="Pymes_S30.13", cuenta="520101", operacion="conversion_moneda", movimiento="AUMENTA")

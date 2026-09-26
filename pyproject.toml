@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scfv-dsr"
+version = "0.1.0"
+description = "SCFV DSR — Design Science Research del Programa SCFV"
+requires-python = ">=3.10"
+dependencies = [
+    "lark>=1.0",
+]
+
+[project.scripts]
+scfv-dsr = "scfv_dsr.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scfv_dsr*"]
+
+[tool.setuptools.package-data]
+scfv_dsr = [
+    "kernel/*.json",
+    "dsl/*.lark",
+    "fractales/*.scfv",
+]

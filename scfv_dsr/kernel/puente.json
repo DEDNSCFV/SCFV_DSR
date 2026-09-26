@@ -1,0 +1,118 @@
+{
+  "version": "1.0",
+  "descripcion": "Puente categoria <-> cuenta. Traduce el nombre categorico (que emite el fractal) a la cuenta concreta (que consume el motor).",
+  "reglas": {
+    "sentido": "categoria + marco -> lista de cuentas",
+    "aditivo": "Se anaden categorias y cuentas sin modificar las existentes.",
+    "multi_cuenta": "Una categoria puede mapear a N cuentas; una cuenta a 1 categoria."
+  },
+  "puente": {
+    "efectivo_equivalentes": {
+      "cuentas": [
+        "110101"
+      ]
+    },
+    "inventarios": {
+      "cuentas": [
+        "140101"
+      ]
+    },
+    "cxp_comerciales": {
+      "cuentas": [
+        "210101"
+      ]
+    },
+    "impuestos_por_pagar": {
+      "cuentas": [
+        "210201"
+      ]
+    },
+    "ingresos_ordinarios": {
+      "cuentas": [
+        "410101"
+      ]
+    },
+    "costo_ventas": {
+      "cuentas": [
+        "610101"
+      ]
+    },
+    "ppe": {
+      "cuentas": [
+        "150101",
+        "150102",
+        "150103"
+      ]
+    },
+    "depreciacion_acumulada": {
+      "cuentas": [
+        "150199"
+      ]
+    },
+    "intangibles": {
+      "cuentas": [
+        "160101"
+      ]
+    },
+    "amortizacion_acumulada": {
+      "cuentas": [
+        "160199"
+      ]
+    },
+    "plusvalia": {
+      "cuentas": [
+        "170101"
+      ]
+    },
+    "arrendamiento_activo": {
+      "cuentas": [
+        "180101"
+      ]
+    },
+    "arrendamiento_pasivo": {
+      "cuentas": [
+        "210301"
+      ]
+    },
+    "provisiones": {
+      "cuentas": [
+        "220101"
+      ]
+    },
+    "subvenciones_diferidas": {
+      "cuentas": [
+        "310101"
+      ]
+    },
+    "resultado_reexpresion": {
+      "cuentas": [
+        "510101"
+      ]
+    },
+    "diferencia_cambio": {
+      "cuentas": [
+        "520101"
+      ]
+    },
+    "ingreso_por_subvencion": {
+      "cuentas": [
+        "510201"
+      ]
+    },
+    "ganancia_compra_ventajosa": {
+      "cuentas": [
+        "410201"
+      ]
+    },
+    "gasto_financiero": {
+      "cuentas": [
+        "610301"
+      ]
+    },
+    "perdida_deterioro": {
+      "cuentas": [
+        "610401"
+      ]
+    }
+  }
+}

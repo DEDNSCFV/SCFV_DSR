@@ -1,0 +1,18 @@
+FRACTAL INTANGIBLES DOMINIO CONTABLE:
+    REGLA ACTIVACION_PYMES:
+        SI marco == "NIIF_PYMES" Y adquisicion_intangible
+        ENTONCES
+            GENERAR CONSECUENCIA(fuente="Pymes_S18.9", categoria="intangibles", operacion="suma_montos", movimiento="AUMENTA")
+            GENERAR CONSECUENCIA(fuente="Pymes_S18.9", cuenta="210101", operacion="suma_montos", movimiento="AUMENTA")
+
+    REGLA AMORTIZACION_PYMES:
+        SI marco == "NIIF_PYMES" Y activo_es_intangible
+        ENTONCES
+            GENERAR CONSECUENCIA(fuente="Pymes_S18.20", cuenta="610202", operacion="amortizacion_lineal", movimiento="AUMENTA")
+            GENERAR CONSECUENCIA(fuente="Pymes_S18.20", cuenta="160199", operacion="amortizacion_lineal", movimiento="AUMENTA")
+
+    REGLA DETERIORO_INTANGIBLE_PYMES:
+        SI marco == "NIIF_PYMES" Y deterioro_intangible
+        ENTONCES
+            GENERAR CONSECUENCIA(fuente="Pymes_S18.24", categoria="perdida_deterioro", operacion="suma_montos", movimiento="AUMENTA")
+            GENERAR CONSECUENCIA(fuente="Pymes_S18.24", categoria="intangibles", operacion="suma_montos", movimiento="DISMINUYE")

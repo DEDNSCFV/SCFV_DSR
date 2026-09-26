@@ -1,0 +1,146 @@
+{
+  "version": "1.0",
+  "descripcion": "Plan de Cuentas Unico (PCU) consolidado. Codigo + nombre + naturaleza.",
+  "fuente": "Consolidado desde eventos, fractales, libros y tests del corpus scfv_v6.",
+  "reglas": {
+    "aditivo": "Se anaden cuentas nuevas sin modificar las existentes.",
+    "frontera": "Naturaleza DEUDORA o ACREEDORA. Movimiento AUMENTA o DISMINUYE."
+  },
+  "cuentas": {
+    "110101": {
+      "nombre": "Caja",
+      "naturaleza": "DEUDORA",
+      "tipo": "activo_corriente"
+    },
+    "140101": {
+      "nombre": "Mercaderias",
+      "naturaleza": "DEUDORA",
+      "tipo": "activo_corriente"
+    },
+    "210101": {
+      "nombre": "Proveedores",
+      "naturaleza": "ACREEDORA",
+      "tipo": "pasivo_corriente"
+    },
+    "210201": {
+      "nombre": "IVA por pagar",
+      "naturaleza": "ACREEDORA",
+      "tipo": "pasivo_corriente"
+    },
+    "410101": {
+      "nombre": "Ventas",
+      "naturaleza": "ACREEDORA",
+      "tipo": "ingreso_ordinario"
+    },
+    "610101": {
+      "nombre": "Costo de ventas",
+      "naturaleza": "DEUDORA",
+      "tipo": "gasto"
+    },
+    "150101": {
+      "nombre": "Terrenos",
+      "naturaleza": "DEUDORA",
+      "tipo": "activo_no_corriente"
+    },
+    "150102": {
+      "nombre": "Edificios",
+      "naturaleza": "DEUDORA",
+      "tipo": "activo_no_corriente"
+    },
+    "150103": {
+      "nombre": "Maquinaria",
+      "naturaleza": "DEUDORA",
+      "tipo": "activo_no_corriente"
+    },
+    "150199": {
+      "nombre": "Depreciacion acumulada",
+      "naturaleza": "ACREEDORA",
+      "tipo": "activo_no_corriente"
+    },
+    "160101": {
+      "nombre": "Activos intangibles",
+      "naturaleza": "DEUDORA",
+      "tipo": "activo_no_corriente"
+    },
+    "160199": {
+      "nombre": "Amortizacion acumulada",
+      "naturaleza": "ACREEDORA",
+      "tipo": "activo_no_corriente"
+    },
+    "170101": {
+      "nombre": "Plusvalia",
+      "naturaleza": "DEUDORA",
+      "tipo": "activo_no_corriente"
+    },
+    "180101": {
+      "nombre": "Activo por derecho de uso",
+      "naturaleza": "DEUDORA",
+      "tipo": "activo_no_corriente"
+    },
+    "210301": {
+      "nombre": "Pasivo por arrendamiento",
+      "naturaleza": "ACREEDORA",
+      "tipo": "pasivo_corriente"
+    },
+    "220101": {
+      "nombre": "Provisiones",
+      "naturaleza": "ACREEDORA",
+      "tipo": "pasivo_corriente"
+    },
+    "310101": {
+      "nombre": "Subvenciones diferidas",
+      "naturaleza": "ACREEDORA",
+      "tipo": "pasivo_corriente"
+    },
+    "510101": {
+      "nombre": "Resultado por reexpresion",
+      "naturaleza": "ACREEDORA",
+      "tipo": "patrimonio"
+    },
+    "520101": {
+      "nombre": "Diferencia de cambio",
+      "naturaleza": "DEUDORA",
+      "tipo": "gasto"
+    },
+    "610201": {
+      "nombre": "Gasto depreciacion",
+      "naturaleza": "DEUDORA",
+      "tipo": "gasto"
+    },
+    "610202": {
+      "nombre": "Gasto amortizacion",
+      "naturaleza": "DEUDORA",
+      "tipo": "gasto"
+    },
+    "610203": {
+      "nombre": "Gasto por provision",
+      "naturaleza": "DEUDORA",
+      "tipo": "gasto"
+    },
+    "510201": {
+      "nombre": "Ingreso por subvencion",
+      "naturaleza": "ACREEDORA",
+      "tipo": "ingreso"
+    },
+    "410201": {
+      "nombre": "Ganancia compra ventajosa",
+      "naturaleza": "ACREEDORA",
+      "tipo": "ingreso"
+    },
+    "610301": {
+      "nombre": "Gasto por intereses",
+      "naturaleza": "DEUDORA",
+      "tipo": "gasto"
+    },
+    "610401": {
+      "nombre": "Perdida por deterioro",
+      "naturaleza": "DEUDORA",
+      "tipo": "gasto"
+    },
+    "520101b": {
+      "nombre": "Diferencia de cambio ganancia",
+      "naturaleza": "ACREEDORA",
+      "tipo": "ingreso"
+    }
+  }
+}

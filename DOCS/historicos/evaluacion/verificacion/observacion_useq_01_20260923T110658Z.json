@@ -1,0 +1,34 @@
+{
+  "pre_registro": "vE",
+  "condiciones": {
+    "k_inicial": 1,
+    "k_evento": 1,
+    "fuente": "/data/data/com.termux/files/home/scfv_v6/scfv.db",
+    "alcance": "event_store.id en [k_inicial, k_evento]"
+  },
+  "ejecucion_utc": "2026-09-23T11:06:59.103940Z",
+  "eventos_observados": [
+    1
+  ],
+  "saldos_por_evento": {
+    "1": {
+      "110101": 1000.0,
+      "410101": -1000.0
+    }
+  },
+  "consolidado_por_cuenta": {
+    "110101": 1000.0,
+    "410101": -1000.0
+  },
+  "suma_algebraica_global": 0.0,
+  "partida_doble_ok": true,
+  "hash_previo_evento_1": "0000000000000000000000000000000000000000000000000000000000000000",
+  "hash_actual_evento_1": "60cd7015f4d8a1086e8b673fb78fb47d78f759689250d3d35451e971f5624296",
+  "version_contexto_evento_1": {
+    "V_NORMATIVO": "1.0",
+    "V_REGLAS": "1.0",
+    "V_MOTOR": "8.1",
+    "hash_normas": "ccc53153185019adc220b14ec55e10adc8e0c47b1c24f8d46a6c90e240db318a",
+    "version_perfil": "e258ca53299de54c6723d8c0d6d03ea69c9bcc43286a29b5e15877dac3fa753b"
+  }
+}

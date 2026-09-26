@@ -1,0 +1,20 @@
+# Normalización de fin de línea
+* text=auto eol=lf
+
+# Archivos binarios
+*.png binary
+*.jpg binary
+*.pdf binary
+*.db binary
+*.sqlite binary
+
+# Corpus SCFV
+*.scfv text eol=lf
+*.lark text eol=lf
+
+# Python
+*.py text eol=lf
+*.pyi text eol=lf
+
+# Documentación
+*.md text eol=lf

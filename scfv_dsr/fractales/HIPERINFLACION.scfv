@@ -1,0 +1,12 @@
+FRACTAL HIPERINFLACION DOMINIO CONTABLE:
+    REGLA REEXPRESION_ACTIVO_PYMES:
+        SI marco == "NIIF_PYMES" Y partida_no_monetaria Y economia_hiperinflacionaria
+        ENTONCES
+            GENERAR CONSECUENCIA(fuente="Pymes_S31.11", categoria="inventarios", operacion="reexpresion_inflacion", movimiento="AUMENTA")
+            GENERAR CONSECUENCIA(fuente="Pymes_S31.11", cuenta="510101", operacion="reexpresion_inflacion", movimiento="AUMENTA")
+
+    REGLA REEXPRESION_PATRIMONIO_PYMES:
+        SI marco == "NIIF_PYMES" Y capital_social Y economia_hiperinflacionaria
+        ENTONCES
+            GENERAR CONSECUENCIA(fuente="Pymes_S31.12", cuenta="510101", operacion="reexpresion_inflacion", movimiento="DISMINUYE")
+            GENERAR CONSECUENCIA(fuente="Pymes_S31.12", cuenta="310101", operacion="reexpresion_inflacion", movimiento="AUMENTA")
