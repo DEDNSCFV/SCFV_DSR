@@ -19,10 +19,11 @@ Principios:
 
 import sqlite3
 import json
+from contextlib import contextmanager
 import hashlib
 import time
 
-from typing import Dict, Any, Optional, List
+from typing import Dict, Optional, List
 
 from scfv_dsr.infraestructura.serializador_canonico import (
     serializar,
@@ -43,6 +44,7 @@ class EventStore:
         self.db_path = db_path
         self.conn = sqlite3.connect(db_path)
         self.conn.row_factory = sqlite3.Row
+        self._en_transaccion = False
         self._init_tables()
 
     def _init_tables(self):
@@ -70,7 +72,8 @@ class EventStore:
         payload: Dict,
         correlation_id: str,
         idempotency_key: str,
-        version_contexto: Optional[Dict] = None
+        version_contexto: Optional[Dict] = None,
+        commit: bool = True,
     ) -> None:
         """
         Persiste un evento utilizando exclusivamente representación canónica.
@@ -88,6 +91,13 @@ class EventStore:
 
         No se utiliza default=str.
         """
+
+        if not commit and not self._en_transaccion:
+            raise RuntimeError(
+                "guardar(commit=False) requiere estar dentro de "
+                "store.transaccion(). Sin CM, la transacción "
+                "implícita de sqlite3 no se cierra y quedan locks."
+            )
 
         cursor = self.conn.cursor()
 
@@ -200,7 +210,8 @@ class EventStore:
             )
         )
 
-        self.conn.commit()
+        if commit:
+            self.conn.commit()
 
     def obtener_hash_final(self) -> str:
         cursor = self.conn.cursor()
@@ -408,6 +419,28 @@ class EventStore:
 
     def cerrar(self):
         self.conn.close()
+
+    @contextmanager
+    def transaccion(self):
+        """Context manager transaccional.
+        
+        Con isolation_level='' (default de sqlite3), Python abre
+        transacción implícita en la primera DML y la cierra en el
+        próximo commit()/rollback(). Este CM coordina el cierre.
+        Reentrada: si ya estamos dentro, hace yield sin commit propio.
+        """
+        if self._en_transaccion:
+            yield self
+            return
+        self._en_transaccion = True
+        try:
+            yield self
+            self.conn.commit()
+        except Exception:
+            self.conn.rollback()
+            raise
+        finally:
+            self._en_transaccion = False
 
     def obtener_por_correlation(
         self,

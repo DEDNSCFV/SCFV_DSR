@@ -47,6 +47,7 @@ class H2Decision:
         tipo_decision: TipoDecisionH2 = TipoDecisionH2.ACEPTAR,
         justificacion: Optional[str] = None,
         autor: Optional[str] = None,
+        commit: bool = True,
     ) -> Dict:
 
         if propuesta_original is None:
@@ -111,6 +112,7 @@ class H2Decision:
             decision.correlation_id,
             decision.idempotency_key,
             contexto,
+            commit=commit,
         )
 
         return {
