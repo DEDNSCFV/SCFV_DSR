@@ -115,10 +115,6 @@ def evaluar_operacion(op_id, ev, kernel, baldor):
     if op_id == "reexpresion_inflacion":
         o = ev.get("indice_origen", 1)
         return ev.get("monto_historico", 0) * (ev.get("indice_cierre", 1) / o) if o else 0
-    if op_id == "suma_montos":
-        if "montos" in ev and isinstance(ev["montos"], list):
-            return sum(float(x) for x in ev["montos"])
-        return float(ev.get("monto", 0))
     return 0.0
 
 
