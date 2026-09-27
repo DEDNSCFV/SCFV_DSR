@@ -79,9 +79,26 @@ def parsear_accion(accion_str):
     }
 
 
+_OPS_DESPACHO_FASE2A = frozenset({
+    "capital_final",     # interes_compuesto
+    "capital_inicial",   # valor_presente
+    "tasa_ic",           # tasa_efectiva
+})
+
+
 def evaluar_operacion(op_id, ev, kernel, baldor):
     op = kernel["operaciones"].get(op_id)
     if not op:
+        return 0.0
+    # FASE 2.a · despacho Baldor (ops inertes · retorno numérico)
+    fn_name = op.get("funcion_baldor")
+    if fn_name in _OPS_DESPACHO_FASE2A:
+        fn = getattr(baldor, fn_name, None)
+        if fn is None:
+            return 0.0
+        params = op.get("parametros", [])
+        if all(pp in ev for pp in params):
+            return fn(**{pp: ev[pp] for pp in params})
         return 0.0
     # Operaciones compuestas con manejo directo (antes del fallback baldor)
     if op_id == "suma_montos":
