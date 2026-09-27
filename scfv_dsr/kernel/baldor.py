@@ -20,7 +20,6 @@ Frontera declarada (D-BALDOR-2):
     cálculo de mora legal, operaciones específicas de industria.
 """
 
-from decimal import Decimal
 from typing import List, Tuple
 
 

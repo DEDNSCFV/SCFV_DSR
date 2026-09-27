@@ -4,7 +4,7 @@ Autor: Domingo E. Díaz N. (C.P.C. Nº 183594)
 Fecha: 2026-08-30
 """
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Optional, List, Dict, Any
 from scfv_dsr.contable.estados import EstadoPropuesta, EstadoEpistemico
 

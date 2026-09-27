@@ -6,7 +6,6 @@ Fecha: 2026-09-02
 
 from enum import Enum, auto
 from dataclasses import dataclass
-from typing import Optional, List, Dict, Any
 
 @dataclass
 class VersionContexto:

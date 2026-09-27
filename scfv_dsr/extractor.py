@@ -12,9 +12,7 @@ Autoridad:
 """
 
 import json
-import sys
 import uuid
-from pathlib import Path
 
 
 from scfv_dsr.epistemologico.evidencia import Evidencia

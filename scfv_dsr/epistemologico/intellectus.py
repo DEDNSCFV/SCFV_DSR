@@ -2,7 +2,7 @@
 SCFV v8.1 - Intellectus: Mapa Normativo Iluminado (con normalización)
 Adaptado para soportar condiciones compuestas AND/OR (v8.2)
 """
-from typing import Dict, List, Any
+from typing import Dict, List
 
 class Intellectus:
     """Intérprete hermenéutico-deconstructivo."""

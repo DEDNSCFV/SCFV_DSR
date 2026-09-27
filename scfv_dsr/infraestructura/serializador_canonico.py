@@ -42,7 +42,6 @@ class PersistenciaViolacion(Exception):
     Se utiliza cuando un objeto no puede representarse o reconstruirse
     mediante el contrato canónico.
     """
-    pass
 
 
 def _es_enum(tipo: Any) -> bool:

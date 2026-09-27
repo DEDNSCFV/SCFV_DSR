@@ -1,18 +1,15 @@
 """
 SCFV v8.1 - Motor Contable con I2, I13 e I6 enriquecidas
 """
-import sqlite3
-import hashlib
-import json
 import uuid
 from scfv_dsr.kernel.xnor import (
     ubicacion_booleana,
     ubicacion_gf2,
     ubicacion_signos,
 )
-from typing import Dict, List, Any, Optional
+from typing import Dict, List, Optional
 
-from scfv_dsr.contable.modelos import ConsecuenciaAutorizada, ContextoContable
+from scfv_dsr.contable.modelos import ConsecuenciaAutorizada
 from scfv_dsr.contable.verificador_autorizacion import VerificadorAutorizacion
 
 

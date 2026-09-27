@@ -2,7 +2,7 @@
 SCFV v8.1 - Dictum: Orientación a partir del mapa normativo
 Adaptado para generar estructura JSON (v8.2) además de texto
 """
-from typing import Dict, List, Optional
+from typing import Dict
 
 class Dictum:
     @staticmethod
