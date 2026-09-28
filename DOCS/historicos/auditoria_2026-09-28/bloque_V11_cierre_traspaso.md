@@ -1,0 +1,1 @@
+[...contenido completo del acta...]
