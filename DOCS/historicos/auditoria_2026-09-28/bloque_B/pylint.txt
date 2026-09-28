@@ -1,0 +1,171 @@
+************* Module scfv_dsr.evaluador
+scfv_dsr/evaluador.py:13:33: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+scfv_dsr/evaluador.py:14:33: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+scfv_dsr/evaluador.py:15:33: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+scfv_dsr/evaluador.py:16:33: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+scfv_dsr/evaluador.py:108:42: C0321: More than one statement on a single line (multiple-statements)
+scfv_dsr/evaluador.py:109:44: C0321: More than one statement on a single line (multiple-statements)
+scfv_dsr/evaluador.py:110:42: C0321: More than one statement on a single line (multiple-statements)
+scfv_dsr/evaluador.py:89:0: R0911: Too many return statements (19/6) (too-many-return-statements)
+************* Module scfv_dsr.extractor
+scfv_dsr/extractor.py:54:0: C0325: Unnecessary parens after '=' keyword (superfluous-parens)
+scfv_dsr/extractor.py:55:0: C0325: Unnecessary parens after '=' keyword (superfluous-parens)
+scfv_dsr/extractor.py:56:0: C0325: Unnecessary parens after '=' keyword (superfluous-parens)
+scfv_dsr/extractor.py:57:0: C0325: Unnecessary parens after '=' keyword (superfluous-parens)
+scfv_dsr/extractor.py:58:0: C0325: Unnecessary parens after '=' keyword (superfluous-parens)
+scfv_dsr/extractor.py:59:0: C0325: Unnecessary parens after '=' keyword (superfluous-parens)
+scfv_dsr/extractor.py:68:11: W0718: Catching too general exception Exception (broad-exception-caught)
+************* Module scfv_dsr.integrador
+scfv_dsr/integrador.py:25:0: C0413: Import "from scfv_dsr.dsl.parser import SCFVParser" should be placed at the top of the module (wrong-import-position)
+scfv_dsr/integrador.py:26:0: E0401: Unable to import 'evaluador' (import-error)
+scfv_dsr/integrador.py:26:0: C0413: Import "import evaluador" should be placed at the top of the module (wrong-import-position)
+scfv_dsr/integrador.py:27:0: C0413: Import "from scfv_dsr.kernel import baldor" should be placed at the top of the module (wrong-import-position)
+scfv_dsr/integrador.py:28:0: C0413: Import "from scfv_dsr.kernel import xnor" should be placed at the top of the module (wrong-import-position)
+scfv_dsr/integrador.py:29:0: C0413: Import "from scfv_dsr.contable.event_store import EventStore" should be placed at the top of the module (wrong-import-position)
+scfv_dsr/integrador.py:30:0: C0413: Import "from scfv_dsr.profesional.orquestador import ejecutar_ciclo_v82" should be placed at the top of the module (wrong-import-position)
+scfv_dsr/integrador.py:31:0: C0413: Import "from scfv_dsr.contable.modelos import ContextoContable" should be placed at the top of the module (wrong-import-position)
+scfv_dsr/integrador.py:46:15: W0718: Catching too general exception Exception (broad-exception-caught)
+scfv_dsr/integrador.py:52:4: C0415: Import outside toplevel (scfv_dsr.epistemologico.models.ObservacionH1, scfv_dsr.epistemologico.models.EntidadExtraida) (import-outside-toplevel)
+scfv_dsr/integrador.py:65:4: C0103: Variable name "V" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/integrador.py:101:0: R0917: Too many positional arguments (12/5) (too-many-positional-arguments)
+scfv_dsr/integrador.py:26:0: C0411: third party import "evaluador" should be placed before first party import "scfv_dsr.dsl.parser.SCFVParser"  (wrong-import-order)
+scfv_dsr/integrador.py:27:0: C0412: Imports from package scfv_dsr are not grouped (ungrouped-imports)
+************* Module scfv_dsr.cli
+scfv_dsr/cli.py:21:4: C0415: Import outside toplevel (scfv_dsr.contable.event_store.EventStore) (import-outside-toplevel)
+scfv_dsr/cli.py:19:13: W0613: Unused argument 'args' (unused-argument)
+scfv_dsr/cli.py:28:13: W0613: Unused argument 'args' (unused-argument)
+scfv_dsr/cli.py:35:4: C0415: Import outside toplevel (scfv_dsr.integrador.ejecutar_fractal_en_pipeline) (import-outside-toplevel)
+scfv_dsr/cli.py:41:23: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+scfv_dsr/cli.py:41:23: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+scfv_dsr/cli.py:58:15: W0613: Unused argument 'args' (unused-argument)
+************* Module scfv_dsr.kernel.baldor
+scfv_dsr/kernel/baldor.py:273:4: C0415: Import outside toplevel (math.log) (import-outside-toplevel)
+scfv_dsr/kernel/baldor.py:291:4: C0415: Import outside toplevel (math.log) (import-outside-toplevel)
+scfv_dsr/kernel/baldor.py:312:17: C0103: Argument name "A" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/kernel/baldor.py:312:27: C0103: Argument name "B" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/kernel/baldor.py:317:17: C0103: Argument name "A" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/kernel/baldor.py:317:27: C0103: Argument name "B" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/kernel/baldor.py:322:17: C0103: Argument name "A" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/kernel/baldor.py:327:13: C0103: Argument name "A" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/kernel/baldor.py:351:4: C0415: Import outside toplevel (math.floor) (import-outside-toplevel)
+scfv_dsr/kernel/baldor.py:393:20: C0103: Argument name "C" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/kernel/baldor.py:398:14: C0103: Argument name "C" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/kernel/baldor.py:403:4: C0415: Import outside toplevel (math.log) (import-outside-toplevel)
+scfv_dsr/kernel/baldor.py:409:12: C0103: Argument name "C" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/kernel/baldor.py:426:22: C0103: Argument name "A" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/kernel/baldor.py:426:32: C0103: Argument name "B" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/kernel/baldor.py:433:22: C0103: Argument name "A" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/kernel/baldor.py:433:32: C0103: Argument name "B" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/kernel/baldor.py:438:35: C0103: Argument name "B" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/kernel/baldor.py:443:35: C0103: Argument name "B" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/kernel/baldor.py:450:36: C0103: Argument name "B" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/kernel/baldor.py:450:46: C0103: Argument name "C" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/kernel/baldor.py:486:0: R0917: Too many positional arguments (6/5) (too-many-positional-arguments)
+scfv_dsr/kernel/baldor.py:522:4: C0415: Import outside toplevel (math.sqrt) (import-outside-toplevel)
+scfv_dsr/kernel/baldor.py:525:4: C0103: Variable name "D" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/kernel/baldor.py:528:4: C0103: Variable name "raiz_D" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/kernel/baldor.py:573:4: C0415: Import outside toplevel (math.log) (import-outside-toplevel)
+************* Module scfv_dsr.epistemologico.models
+scfv_dsr/epistemologico/models.py:29:0: R0902: Too many instance attributes (9/7) (too-many-instance-attributes)
+scfv_dsr/epistemologico/models.py:42:0: R0902: Too many instance attributes (10/7) (too-many-instance-attributes)
+scfv_dsr/epistemologico/models.py:61:4: C0103: Attribute name "soporte_C" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/epistemologico/models.py:56:0: R0902: Too many instance attributes (13/7) (too-many-instance-attributes)
+scfv_dsr/epistemologico/models.py:72:0: R0902: Too many instance attributes (10/7) (too-many-instance-attributes)
+scfv_dsr/epistemologico/models.py:87:4: C0103: Attribute name "H" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/epistemologico/models.py:88:4: C0103: Attribute name "C" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/epistemologico/models.py:89:4: C0103: Attribute name "E" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/epistemologico/models.py:90:4: C0103: Attribute name "M" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/epistemologico/models.py:91:4: C0103: Attribute name "V" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/epistemologico/models.py:92:4: C0103: Attribute name "X" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/epistemologico/models.py:93:4: C0103: Attribute name "K" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/epistemologico/models.py:85:0: R0902: Too many instance attributes (8/7) (too-many-instance-attributes)
+************* Module scfv_dsr.epistemologico.evidencia
+scfv_dsr/epistemologico/evidencia.py:38:0: R0902: Too many instance attributes (9/7) (too-many-instance-attributes)
+scfv_dsr/epistemologico/evidencia.py:141:4: R0917: Too many positional arguments (6/5) (too-many-positional-arguments)
+************* Module scfv_dsr.epistemologico.perceptum
+scfv_dsr/epistemologico/perceptum.py:160:15: W0718: Catching too general exception Exception (broad-exception-caught)
+************* Module scfv_dsr.epistemologico.generador_propuesta
+scfv_dsr/epistemologico/generador_propuesta.py:152:4: W0612: Unused variable 'r' (unused-variable)
+scfv_dsr/epistemologico/generador_propuesta.py:153:4: W0612: Unused variable 's' (unused-variable)
+scfv_dsr/epistemologico/generador_propuesta.py:154:4: W0612: Unused variable 'o' (unused-variable)
+scfv_dsr/epistemologico/generador_propuesta.py:155:4: W0612: Unused variable 't' (unused-variable)
+scfv_dsr/epistemologico/generador_propuesta.py:156:4: W0612: Unused variable 'v' (unused-variable)
+scfv_dsr/epistemologico/generador_propuesta.py:246:4: C0103: Variable name "soporte_C" doesn't conform to snake_case naming style (invalid-name)
+************* Module scfv_dsr.epistemologico.dictum
+scfv_dsr/epistemologico/dictum.py:66:8: R1705: Unnecessary "elif" after "return", remove the leading "el" from "elif" (no-else-return)
+************* Module scfv_dsr.contable.modelos
+scfv_dsr/contable/modelos.py:16:4: C0103: Attribute name "PCU_version" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/contable/modelos.py:21:0: R0902: Too many instance attributes (11/7) (too-many-instance-attributes)
+scfv_dsr/contable/modelos.py:42:0: R0902: Too many instance attributes (8/7) (too-many-instance-attributes)
+************* Module scfv_dsr.contable.estados
+scfv_dsr/contable/estados.py:74:0: C0305: Trailing newlines (trailing-newlines)
+scfv_dsr/contable/estados.py:15:4: C0103: Attribute name "PCU_version" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/contable/estados.py:11:0: R0902: Too many instance attributes (8/7) (too-many-instance-attributes)
+************* Module scfv_dsr.contable.motor
+scfv_dsr/contable/motor.py:176:0: C0325: Unnecessary parens after 'not' keyword (superfluous-parens)
+scfv_dsr/contable/motor.py:73:4: C0103: Method name "validar_I6" doesn't conform to snake_case naming style (invalid-name)
+scfv_dsr/contable/motor.py:162:37: W1309: Using an f-string that does not have any interpolated variables (f-string-without-interpolation)
+scfv_dsr/contable/motor.py:10:0: C0411: standard import "typing.Dict" should be placed before first party import "scfv_dsr.kernel.xnor.ubicacion_booleana"  (wrong-import-order)
+************* Module scfv_dsr.contable.event_store
+scfv_dsr/contable/event_store.py:490:0: C0305: Trailing newlines (trailing-newlines)
+scfv_dsr/contable/event_store.py:69:4: R0917: Too many positional arguments (6/5) (too-many-positional-arguments)
+************* Module scfv_dsr.contable.maquina_estados_asiento
+scfv_dsr/contable/maquina_estados_asiento.py:20:0: R0902: Too many instance attributes (9/7) (too-many-instance-attributes)
+scfv_dsr/contable/maquina_estados_asiento.py:74:4: R0917: Too many positional arguments (7/5) (too-many-positional-arguments)
+scfv_dsr/contable/maquina_estados_asiento.py:12:0: C0411: standard import "dataclasses.dataclass" should be placed before first party import "scfv_dsr.contable.estados.EstadoAsiento"  (wrong-import-order)
+scfv_dsr/contable/maquina_estados_asiento.py:13:0: C0411: standard import "typing.Optional" should be placed before first party import "scfv_dsr.contable.estados.EstadoAsiento"  (wrong-import-order)
+scfv_dsr/contable/maquina_estados_asiento.py:14:0: C0411: standard import "uuid" should be placed before first party import "scfv_dsr.contable.estados.EstadoAsiento"  (wrong-import-order)
+scfv_dsr/contable/maquina_estados_asiento.py:15:0: C0411: standard import "time" should be placed before first party import "scfv_dsr.contable.estados.EstadoAsiento"  (wrong-import-order)
+scfv_dsr/contable/maquina_estados_asiento.py:16:0: C0411: standard import "hashlib" should be placed before first party import "scfv_dsr.contable.estados.EstadoAsiento"  (wrong-import-order)
+************* Module scfv_dsr.contable.nucleo_consecuencias
+scfv_dsr/contable/nucleo_consecuencias.py:54:8: C0415: Import outside toplevel (scfv_dsr.kernel.xnor.ubicacion_booleana) (import-outside-toplevel)
+scfv_dsr/contable/nucleo_consecuencias.py:78:4: R0917: Too many positional arguments (8/5) (too-many-positional-arguments)
+scfv_dsr/contable/nucleo_consecuencias.py:192:16: W0707: Consider explicitly re-raising using 'except (TypeError, ValueError) as exc' and 'raise ValueError(f'NC_VIOLACION: partida {idx} con monto inválido') from exc' (raise-missing-from)
+************* Module scfv_dsr.contable.puente_consecuencias
+scfv_dsr/contable/puente_consecuencias.py:61:4: R0917: Too many positional arguments (8/5) (too-many-positional-arguments)
+scfv_dsr/contable/puente_consecuencias.py:70:8: W0613: Unused argument 'verificador' (unused-argument)
+************* Module scfv_dsr.contable.examinador
+scfv_dsr/contable/examinador.py:62:0: C0325: Unnecessary parens after 'not' keyword (superfluous-parens)
+scfv_dsr/contable/examinador.py:10:0: C2403: Module name "RetículoCuentas" contains a non-ASCII character, use an ASCII-only alias for import. (non-ascii-module-import)
+scfv_dsr/contable/examinador.py:78:8: C0103: Variable name "C_marco" doesn't conform to snake_case naming style (invalid-name)
+************* Module scfv_dsr.contable.reticulo
+scfv_dsr/contable/reticulo.py:15:0: C2401: Class name "RetículoCuentas" contains a non-ASCII character, consider renaming it. (non-ascii-name)
+************* Module scfv_dsr.contable.reportes_motor
+scfv_dsr/contable/reportes_motor.py:138:8: C0415: Import outside toplevel (fpdf.FPDF) (import-outside-toplevel)
+scfv_dsr/contable/reportes_motor.py:140:8: W0707: Consider explicitly re-raising using 'except ImportError as exc' and 'raise RuntimeError('fpdf no instalado. Ejecutar: pip install fpdf') from exc' (raise-missing-from)
+************* Module scfv_dsr.profesional.h2
+scfv_dsr/profesional/h2.py:41:4: R0917: Too many positional arguments (9/5) (too-many-positional-arguments)
+scfv_dsr/profesional/h2.py:43:8: W0613: Unused argument 'alertas' (unused-argument)
+************* Module scfv_dsr.profesional.orquestador
+scfv_dsr/profesional/orquestador.py:31:0: R0917: Too many positional arguments (13/5) (too-many-positional-arguments)
+scfv_dsr/profesional/orquestador.py:73:20: E0606: Possibly using variable 'resultado_h2' before assignment (possibly-used-before-assignment)
+scfv_dsr/profesional/orquestador.py:163:19: W0718: Catching too general exception Exception (broad-exception-caught)
+************* Module scfv_dsr.dsl.parser
+scfv_dsr/dsl/parser.py:14:13: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+scfv_dsr/dsl/parser.py:24:12: W0707: Consider explicitly re-raising using 'raise SyntaxError(f'Error de sintaxis en {filepath}: {e}') from e' (raise-missing-from)
+scfv_dsr/dsl/parser.py:31:12: W0707: Consider explicitly re-raising using 'raise SyntaxError(f'Error de sintaxis: {e}') from e' (raise-missing-from)
+scfv_dsr/dsl/parser.py:39:8: R1705: Unnecessary "elif" after "return", remove the leading "el" from "elif" (no-else-return)
+scfv_dsr/dsl/parser.py:43:12: R1705: Unnecessary "elif" after "return", remove the leading "el" from "elif" (no-else-return)
+scfv_dsr/dsl/parser.py:58:4: R0911: Too many return statements (10/6) (too-many-return-statements)
+scfv_dsr/dsl/parser.py:7:0: C0411: standard import "pathlib.Path" should be placed before third party import "lark" (wrong-import-order)
+scfv_dsr/dsl/parser.py:8:0: C0411: standard import "typing.Dict" should be placed before third party import "lark" (wrong-import-order)
+************* Module scfv_dsr.dsl.tests.test_grammar_lalr
+scfv_dsr/dsl/tests/test_grammar_lalr.py:5:0: C0413: Import "from lark import Lark" should be placed at the top of the module (wrong-import-position)
+************* Module scfv_dsr.dsl.tests.test_compatibilidad_s0
+scfv_dsr/dsl/tests/test_compatibilidad_s0.py:5:0: C0413: Import "from scfv_dsr.dsl.parser import SCFVParser" should be placed at the top of the module (wrong-import-position)
+************* Module scfv_dsr.dsl.tests.test_contract_def
+scfv_dsr/dsl/tests/test_contract_def.py:5:0: C0413: Import "from scfv_dsr.dsl.parser import SCFVParser" should be placed at the top of the module (wrong-import-position)
+************* Module scfv_dsr.dsl.tests.test_invariant_def
+scfv_dsr/dsl/tests/test_invariant_def.py:5:0: C0413: Import "from scfv_dsr.dsl.parser import SCFVParser" should be placed at the top of the module (wrong-import-position)
+************* Module scfv_dsr.dsl.tests.test_asiento_declarado_def
+scfv_dsr/dsl/tests/test_asiento_declarado_def.py:5:0: C0413: Import "from scfv_dsr.dsl.parser import SCFVParser" should be placed at the top of the module (wrong-import-position)
+************* Module scfv_dsr.infraestructura.serializador_canonico
+scfv_dsr/infraestructura/serializador_canonico.py:148:5: W0511: Todo lo demás se rechaza (fixme)
+scfv_dsr/infraestructura/serializador_canonico.py:69:19: C0123: Use isinstance() rather than type() for a typecheck. (unidiomatic-typecheck)
+scfv_dsr/infraestructura/serializador_canonico.py:76:0: R0911: Too many return statements (11/6) (too-many-return-statements)
+scfv_dsr/infraestructura/serializador_canonico.py:156:0: R0911: Too many return statements (14/6) (too-many-return-statements)
+scfv_dsr/infraestructura/serializador_canonico.py:334:16: C0415: Import outside toplevel (dataclasses.MISSING) (import-outside-toplevel)
+
+-----------------------------------
+Your code has been rated at 9.33/10
+

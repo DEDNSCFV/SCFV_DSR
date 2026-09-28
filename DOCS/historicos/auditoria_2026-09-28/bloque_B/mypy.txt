@@ -1,0 +1,26 @@
+scfv_dsr/contable/verificador_autorizacion.py:53: error: Incompatible default for parameter "estado_actual" (default has type "None", parameter has type "str")  [assignment]
+scfv_dsr/contable/verificador_autorizacion.py:53: note: PEP 484 prohibits implicit Optional. Accordingly, mypy has changed its default to no_implicit_optional=True
+scfv_dsr/contable/verificador_autorizacion.py:53: note: Use https://github.com/hauntsaninja/no_implicit_optional to automatically upgrade your codebase
+scfv_dsr/contable/reticulo.py:60: error: Need type annotation for "resultado"  [var-annotated]
+scfv_dsr/contable/reticulo.py:86: error: Need type annotation for "cubierto"  [var-annotated]
+scfv_dsr/contable/reticulo.py:99: error: Need type annotation for "cubierto"  [var-annotated]
+scfv_dsr/kernel/baldor.py:372: error: Incompatible types in assignment (expression has type "float", variable has type "int")  [assignment]
+scfv_dsr/contable/nucleo_consecuencias.py:266: error: Argument "firma_h2" to "ConsecuenciaAutorizada" has incompatible type "str | None"; expected "str"  [arg-type]
+scfv_dsr/contable/reportes_motor.py:60: note: By default the bodies of untyped functions are not checked, consider using --check-untyped-defs  [annotation-unchecked]
+scfv_dsr/contable/reportes_motor.py:138: error: Library stubs not installed for "fpdf"  [import-untyped]
+scfv_dsr/contable/reportes_motor.py:138: note: Hint: "python3 -m pip install types-fpdf2"
+scfv_dsr/contable/reportes_motor.py:138: note: (or run "mypy --install-types" to install all missing stub packages)
+scfv_dsr/contable/reportes_motor.py:138: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+scfv_dsr/profesional/h2.py:92: error: Argument "autor" to "_firmar_decision" has incompatible type "str | None"; expected "str"  [arg-type]
+scfv_dsr/profesional/h2.py:102: error: Argument "autor" to "DecisionProfesional" has incompatible type "str | None"; expected "str"  [arg-type]
+scfv_dsr/profesional/h2.py:110: error: Argument 1 to "guardar" of "EventStore" has incompatible type "TipoEvento"; expected "str"  [arg-type]
+scfv_dsr/profesional/h2.py:111: error: Argument 2 to "guardar" of "EventStore" has incompatible type "DecisionProfesional"; expected "dict[Any, Any]"  [arg-type]
+scfv_dsr/profesional/h2.py:114: error: Argument 5 to "guardar" of "EventStore" has incompatible type "VersionContexto"; expected "dict[Any, Any] | None"  [arg-type]
+scfv_dsr/contable/decision_provider.py:51: error: Argument 1 to "obtener_por_tipo" of "EventStore" has incompatible type "TipoEvento"; expected "str"  [arg-type]
+scfv_dsr/contable/decision_provider.py:75: error: Argument "tipo_decision" to "DecisionProfesional" has incompatible type "TipoDecisionH2 | Any | None"; expected "str"  [arg-type]
+scfv_dsr/profesional/orquestador.py:42: error: Incompatible default for parameter "justificacion" (default has type "None", parameter has type "str")  [assignment]
+scfv_dsr/profesional/orquestador.py:42: note: PEP 484 prohibits implicit Optional. Accordingly, mypy has changed its default to no_implicit_optional=True
+scfv_dsr/profesional/orquestador.py:42: note: Use https://github.com/hauntsaninja/no_implicit_optional to automatically upgrade your codebase
+scfv_dsr/profesional/orquestador.py:115: error: Argument 4 to "generar_asiento" of "MotorContable" has incompatible type "dict[str, Any]"; expected "list[dict[Any, Any]] | None"  [arg-type]
+scfv_dsr/dsl/parser.py:111: error: Need type annotation for "result"  [var-annotated]
+scfv_dsr/integrador.py:26: error: Cannot find implementation or library stub for module named "evaluador"  [import-not-found]

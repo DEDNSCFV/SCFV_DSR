@@ -1,0 +1,6 @@
+scfv_dsr/epistemologico/generador_propuesta.py:152:5: local variable 'r' is assigned to but never used
+scfv_dsr/epistemologico/generador_propuesta.py:153:5: local variable 's' is assigned to but never used
+scfv_dsr/epistemologico/generador_propuesta.py:154:5: local variable 'o' is assigned to but never used
+scfv_dsr/epistemologico/generador_propuesta.py:155:5: local variable 't' is assigned to but never used
+scfv_dsr/epistemologico/generador_propuesta.py:156:5: local variable 'v' is assigned to but never used
+scfv_dsr/contable/motor.py:162:38: f-string is missing placeholders

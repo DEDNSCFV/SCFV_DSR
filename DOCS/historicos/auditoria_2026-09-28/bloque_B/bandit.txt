@@ -1,0 +1,151 @@
+Run started:2026-09-28 16:43:57.378845+00:00
+
+Test results:
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: scfv_dsr/dsl/tests/test_asiento_declarado_def.py:11:4
+10	    r = p.parse_string(texto)
+11	    assert "VENTA_001" in r["asientos_declarados"]
+12	    assert r["asientos_declarados"]["VENTA_001"]["cuerpo"] == ["A", "B", "C"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: scfv_dsr/dsl/tests/test_asiento_declarado_def.py:12:4
+11	    assert "VENTA_001" in r["asientos_declarados"]
+12	    assert r["asientos_declarados"]["VENTA_001"]["cuerpo"] == ["A", "B", "C"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: scfv_dsr/dsl/tests/test_compatibilidad_s0.py:17:12
+16	        for k in CLAVES_S0:
+17	            assert k in r, f"Falta clave {k} en {nombre}"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: scfv_dsr/dsl/tests/test_contract_def.py:11:4
+10	    r = p.parse_string(texto)
+11	    assert "VENTA" in r["contratos"]
+12	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: scfv_dsr/dsl/tests/test_contract_def.py:18:4
+17	    r = p.parse_string(texto)
+18	    assert r["contratos"]["VENTA"]["pre"] == "x > 0"
+19	    assert r["contratos"]["VENTA"]["post"] == "y == 1"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: scfv_dsr/dsl/tests/test_contract_def.py:19:4
+18	    assert r["contratos"]["VENTA"]["pre"] == "x > 0"
+19	    assert r["contratos"]["VENTA"]["post"] == "y == 1"
+20	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: scfv_dsr/dsl/tests/test_contract_def.py:25:8
+24	        p.parse_string("CONTRATO")  # incompleto
+25	        assert False, "Debería haber fallado"
+26	    except SyntaxError:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: scfv_dsr/dsl/tests/test_grammar_lalr.py:10:4
+9	    p = Lark(g, start="start", parser="lalr")
+10	    assert p is not None
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: scfv_dsr/dsl/tests/test_invariant_def.py:12:4
+11	    r = p.parse_string(texto)
+12	    assert "BALANCE" in r["invariantes"]
+13	    assert r["invariantes"]["BALANCE"]["dominio"] == "D"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: scfv_dsr/dsl/tests/test_invariant_def.py:13:4
+12	    assert "BALANCE" in r["invariantes"]
+13	    assert r["invariantes"]["BALANCE"]["dominio"] == "D"
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b110_try_except_pass.html
+   Location: scfv_dsr/extractor.py:68:4
+67	            d['costo'] = cant * cu
+68	    except Exception:
+69	        pass
+70	
+
+--------------------------------------------------
+>> Issue: [B112:try_except_continue] Try, Except, Continue detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b112_try_except_continue.html
+   Location: scfv_dsr/integrador.py:46:8
+45	                return m.VersionContexto
+46	        except Exception:
+47	            continue
+48	    raise ImportError("VersionContexto no encontrado en el corpus")
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b110_try_except_pass.html
+   Location: scfv_dsr/profesional/orquestador.py:163:12
+162	                )
+163	            except Exception:
+164	                # F18 · logging es defensa en profundidad, no garantía
+165	                pass
+166	        raise
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 4170
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 13
+		Medium: 0
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 13
+Files skipped (0):
