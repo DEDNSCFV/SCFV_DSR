@@ -23,6 +23,7 @@
 # === Material Fase B · A->B y metodología ===
 a151b2d47020149de6906244b1888b13c6ca0c4908a7c8ac1a745f08df729da1  DOCS/historicos/ventana_2026-09-30/VENTANA_2026-09-30_CONSOLIDADO.md  R3  A->B
 d834a459ff835fd26c02e483d68f53589ce7ecd216b87eed1bf3db4f32f45002  DOCS/historicos/fase_b_2026-09-30/FASE_B_METODOLOGIA_v0.12.md  R3  FaseB
+3c13bcfc30c49495924306f29b8546b81923c9905cf430267006936c44741443  DOCS/historicos/fase_b_2026-09-30/FASE_B_PLAN_VERIFICACIONES_v0.3.md  R3  FaseB
 
 # === Resultados F1..F8 · pendientes ===
 # (se añaden cuando cada bloque se materialice)
