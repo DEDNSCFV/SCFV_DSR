@@ -1,0 +1,28 @@
+# ===================================================================
+# CERTIFICADO DE MATERIALIZACIÓN · FASE B
+# ===================================================================
+#
+# Naturaleza:      certificado del repo activo scfv-dsr
+# Formato:         <sha256>  <ruta_relativa>  <repo>  <bloque>
+# Compatibilidad:  NO con sha256sum -c
+#                  formato genealógico SCFV · no herramienta externa
+#
+# Certificado fundacional de referencia:
+#   scfv-dsr/HASHES.txt · commit e0923e4
+#   · contiene el ancla al snapshot congelado SCFV_DSR
+#   · NO se modifica · solo se lee su sha256
+#
+# Una entrada se agrega SOLO cuando el archivo existe en disco
+# y ha sido hasheado. No se anticipa material futuro.
+#
+# ===================================================================
+
+# === Ancla · certificado fundacional ===
+5833327c94de5d97a4de14eca52be4cb8f1ba758cf9d8329425684bb03cbf1e2  HASHES.txt  R3  fundacional
+
+# === Material Fase B · A->B y metodología ===
+a151b2d47020149de6906244b1888b13c6ca0c4908a7c8ac1a745f08df729da1  DOCS/historicos/ventana_2026-09-30/VENTANA_2026-09-30_CONSOLIDADO.md  R3  A->B
+d834a459ff835fd26c02e483d68f53589ce7ecd216b87eed1bf3db4f32f45002  DOCS/historicos/fase_b_2026-09-30/FASE_B_METODOLOGIA_v0.12.md  R3  FaseB
+
+# === Resultados F1..F8 · pendientes ===
+# (se añaden cuando cada bloque se materialice)
